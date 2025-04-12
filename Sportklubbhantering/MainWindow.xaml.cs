@@ -20,5 +20,15 @@ namespace Sportklubbhantering
         {
             InitializeComponent();
         }
-    }
+
+		private void addButton_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void removeButton_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }
