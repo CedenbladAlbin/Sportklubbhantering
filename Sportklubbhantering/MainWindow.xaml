@@ -5,8 +5,122 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sportklubbhantering"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="500">
+    
+    
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="FloralWhite"/>
+            <Setter Property ="Foreground" Value="Magenta"/>
+            <Setter Property="BorderBrush" Value="pink"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
 
-    </Grid>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="12">
+                            <ContentPresenter 
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Magenta" 
+                          BlurRadius="10" 
+                          ShadowDepth="7" 
+                          Direction="-120" 
+                          Opacity="0.2" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="FloralWhite"/>
+            <Setter Property ="Foreground" Value="DarkMagenta"/>
+            <Setter Property="BorderBrush" Value="HotPink"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="10,0,10,0"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="12">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect 
+                        Color="Magenta" 
+                        BlurRadius="10" 
+                        ShadowDepth="7" 
+                        Direction="-120" 
+                        Opacity="0.2" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel VerticalAlignment="Top" 
+            HorizontalAlignment="Center" 
+            Width="400"
+            Height="300"
+            Margin="60">
+
+        <TextBlock 
+            Text="Log in" 
+            FontSize="24" 
+            Foreground="Orange"
+            Background="White"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,20"/>
+        <TextBox x:Name="inputTextBoxEmail" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
+            Style="{StaticResource TextBoxStyle}"  
+            Margin="0,0,0,10"
+            Padding="5"
+            FontSize="14"/>
+        <TextBox x:Name="inputTextBoxPassword" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
+            Style="{StaticResource TextBoxStyle}"  
+            Margin="0,0,0,10"
+            Padding="5"
+            FontSize="14"/>
+
+        <Grid VerticalAlignment="center" HorizontalAlignment="center" Width="300" Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="LogInButton" 
+                Grid.Column="0"
+                Style="{StaticResource CustomButtonStyle}"
+                Content="Log in" 
+                Click="addButton_Click"/>
+
+            <Button x:Name="removeButton" 
+                Grid.Column="1"
+                Style="{StaticResource CustomButtonStyle}"
+                Content="Create Account" 
+                Click="removeButton_Click"/>
+        </Grid>
+    </StackPanel>
 </Window>
