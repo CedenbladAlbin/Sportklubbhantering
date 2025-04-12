@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Sportklubbhantering"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500">
-    
-    
+    <Window.Background>
+        <ImageBrush ImageSource="background.png" Stretch="UniformToFill"/>
+    </Window.Background>
+
 
     <StackPanel VerticalAlignment="Top" 
             HorizontalAlignment="Center" 
