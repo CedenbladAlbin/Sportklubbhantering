@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Logiclayer\Logiclayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\background.png" />
   </ItemGroup>
 
 </Project>

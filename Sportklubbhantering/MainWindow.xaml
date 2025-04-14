@@ -9,7 +9,7 @@
     <Grid>
         <Canvas Height="225" Width="250" Margin="0 200 0 0">
             <Canvas.Background>
-            <ImageBrush ImageSource="background.png" Stretch="UniformToFill" />
+            <ImageBrush ImageSource="/images/background.png" Stretch="UniformToFill" />
             </Canvas.Background>
         </Canvas>
 
@@ -32,31 +32,31 @@
         <TextBox x:Name="inputTextBoxEmail" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
             Style="{StaticResource TextBoxStyle}"  
             Margin="0,0,0,10"
-            Padding="5"
-            FontSize="14"/>
-        <TextBox x:Name="inputTextBoxPassword" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
-            Style="{StaticResource TextBoxStyle}"  
+            FontSize="14"
+         />
+        <PasswordBox x:Name="inputPasswordBox"
+            Style="{StaticResource PasswordBoxSyle}"  
             Margin="0,0,0,10"
             Padding="5"
             FontSize="14"/>
 
-        <Grid VerticalAlignment="center" HorizontalAlignment="center" Width="300" Height="50">
+            <Grid VerticalAlignment="center" HorizontalAlignment="center" Width="300" Height="50">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
             <Button x:Name="LogInButton" 
-                Grid.Column="0"
+                Grid.Column="1"
                 Style="{StaticResource CustomButtonStyle}"
                 Content="Log in" 
                 Click="addButton_Click"/>
 
-            <Button x:Name="removeButton" 
-                Grid.Column="1"
+            <Button x:Name="CreateAccountBtn" 
+                Grid.Column="0"
                 Style="{StaticResource CustomButtonStyle}"
                 Content="Create Account" 
-                Click="removeButton_Click"/>
+                Click="CreateAccountBtn_Click"/>
         </Grid>
     
     </StackPanel>

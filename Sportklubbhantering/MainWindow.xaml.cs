@@ -9,6 +9,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logiclayer;
+using Sportklubbhantering.ViewModels;
+
 
 namespace Sportklubbhantering
 {
@@ -24,12 +26,27 @@ namespace Sportklubbhantering
 
 		private void addButton_Click(object sender, RoutedEventArgs e)
 		{
-            Checker.CheckCredentials("bajs", "skit");
-		}
+            string name = inputTextBoxEmail.Text;
+            string password = inputPasswordBox.Password;
 
-		private void removeButton_Click(object sender, RoutedEventArgs e)
-		{
+            bool isValid = LogIn.CheckCredentials(name, password);
 
-		}
-	}
+            if (isValid)
+            {
+                MessageBox.Show("Login successful!");
+            }
+            else
+            {
+                MessageBox.Show("Invalid email or password.");
+            }
+        }
+
+        private void CreateAccountBtn_Click(object sender, RoutedEventArgs e)
+        {
+            CreateAccountTrainer CreateAccountTrainertrainerWindow = new CreateAccountTrainer();
+            CreateAccountTrainertrainerWindow.Show();
+            this.Close();
+
+        }
+    }
 }
