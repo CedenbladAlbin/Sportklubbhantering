@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Model
 {
-    internal class Trainer
+    public class Trainer
     {
-        int trainer_ID { get; set; }
-        string trainer_name { get; set; }
-        string specialization { get; set; }
-        string password { get; set; }
+        [Key]
+        public int trainer_ID { get; set; }
+
+        public string trainer_name { get; set; }
+        public string specialization { get; set; }
+        public string password { get; set; }
 
     }
 }

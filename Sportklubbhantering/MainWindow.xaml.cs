@@ -8,7 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Datalayer;
+using Model;
 namespace Sportklubbhantering
 {
     /// <summary>
@@ -24,11 +25,11 @@ namespace Sportklubbhantering
 		private void addButton_Click(object sender, RoutedEventArgs e)
 		{
 
-		}
+        }
 
 		private void removeButton_Click(object sender, RoutedEventArgs e)
 		{
-
-		}
+            
+        }
 	}
 }

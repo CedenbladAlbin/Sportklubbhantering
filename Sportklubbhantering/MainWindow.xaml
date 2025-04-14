@@ -7,11 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="500" Background="#FFACD1">
     <Grid>
-        <Canvas Height="225" Width="250" Margin="0 200 0 0">
-            <Canvas.Background>
-            <ImageBrush ImageSource="background.png" Stretch="UniformToFill" />
-            </Canvas.Background>
-        </Canvas>
+  
 
 
         <StackPanel VerticalAlignment="Top" 
@@ -34,8 +30,8 @@
             Margin="0,0,0,10"
             Padding="5"
             FontSize="14"/>
-        <TextBox x:Name="inputTextBoxPassword" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
-            Style="{StaticResource TextBoxStyle}"  
+        <PasswordBox x:Name="inputTextBoxPassword" FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
+  
             Margin="0,0,0,10"
             Padding="5"
             FontSize="14"/>
