@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Logiclayer;
 
 namespace Sportklubbhantering
 {
@@ -23,7 +24,7 @@ namespace Sportklubbhantering
 
 		private void addButton_Click(object sender, RoutedEventArgs e)
 		{
-
+            Checker.CheckCredentials("bajs", "skit");
 		}
 
 		private void removeButton_Click(object sender, RoutedEventArgs e)
