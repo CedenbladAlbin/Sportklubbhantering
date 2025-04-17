@@ -17,11 +17,31 @@ namespace Sportklubbhantering.ViewPanels
     /// <summary>
     /// Interaction logic for MenuePanel.xaml
     /// </summary>
-    public partial class MenuePanel : Window
+    public partial class MenuPanel : Window
     {
-        public MenuePanel()
+        public MenuPanel()
         {
             InitializeComponent();
+        }
+
+        private void CreateWorkout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ManageMembers_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Reports_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

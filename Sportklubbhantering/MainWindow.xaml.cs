@@ -10,6 +10,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logiclayer;
 using Sportklubbhantering.ViewModels;
+using Sportklubbhantering.ViewPanels;
+
 
 
 namespace Sportklubbhantering
@@ -33,7 +35,9 @@ namespace Sportklubbhantering
 
             if (isValid)
             {
-                MessageBox.Show("Login successful!");
+                MenuPanel menuPanel = new MenuPanel();
+                menuPanel.Show();
+                this.Close();
             }
             else
             {

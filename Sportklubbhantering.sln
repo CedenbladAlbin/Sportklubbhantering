@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "Model\Entity
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DBCon\DataAccessLayer.csproj", "{E77DAC8E-4E48-4024-92A3-33C7AE6C3857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisniessLayer", "Logiclayer\BuisniessLayer.csproj", "{F37E7B63-C75D-4567-9DCC-87A168E123D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "Logiclayer\BusinessLayer.csproj", "{F37E7B63-C75D-4567-9DCC-87A168E123D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,48 @@
+﻿<Window x:Class="Sportklubbhantering.ViewPanels.MenuPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sportklubbhantering.ViewPanels"
+        mc:Ignorable="d"
+        Title="MenuPanel"  Height="450" Width="500" Background="#8000B0  ">
+
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical" >
+
+
+            <Canvas Height="144" Width="286"  Margin="0,0,0,10">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/images/Welcome.jpg" Stretch="UniformToFill" />
+                </Canvas.Background>
+            </Canvas>
+
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Create Workout" 
+                    Click="CreateWorkout_Click"
+                    Width="150"
+                    Margin="0,0,0,10"/>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Mangage Members" 
+                    Click="ManageMembers_Click"
+                     Width="150"
+                    Margin="0,0,0,10"/>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Manage equipment" 
+                    Click="Reports_Click"
+                     Width="150"
+                    Margin="0,0,0,10"/>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Sign out" 
+                    Click="Logout_Click"
+                    
+                    Margin="0,0,0,10"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
