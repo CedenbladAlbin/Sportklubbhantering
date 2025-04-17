@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DBCon\Datalayer.csproj" />
-    <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\DBCon\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Model\EntityLayer.csproj" />
   </ItemGroup>
 
 </Project>

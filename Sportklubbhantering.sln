@@ -3,16 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sportklubbhantering", "Sportklubbhantering\Sportklubbhantering.csproj", "{051B3F30-0415-463C-8835-30B96D951F62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UILayer", "Sportklubbhantering\UILayer.csproj", "{051B3F30-0415-463C-8835-30B96D951F62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{8429C0AC-F84F-4E7E-81D5-A9812531F1A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "Model\EntityLayer.csproj", "{8429C0AC-F84F-4E7E-81D5-A9812531F1A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datalayer", "DBCon\Datalayer.csproj", "{E77DAC8E-4E48-4024-92A3-33C7AE6C3857}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DBCon\DataAccessLayer.csproj", "{E77DAC8E-4E48-4024-92A3-33C7AE6C3857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logiclayer", "Logiclayer\Logiclayer.csproj", "{F37E7B63-C75D-4567-9DCC-87A168E123D0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{E77DAC8E-4E48-4024-92A3-33C7AE6C3857} = {E77DAC8E-4E48-4024-92A3-33C7AE6C3857}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisniessLayer", "Logiclayer\BuisniessLayer.csproj", "{F37E7B63-C75D-4567-9DCC-87A168E123D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
