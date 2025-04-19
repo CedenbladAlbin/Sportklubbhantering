@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Model;
+﻿using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 using System.Reflection.Metadata;
 
-namespace Datalayer
+namespace DataAccessLayer
 {
     public class Datalayer : DbContext
     {

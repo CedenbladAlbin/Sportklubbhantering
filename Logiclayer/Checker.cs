@@ -1,9 +1,7 @@
-using Datalayer;
-using Model;
 
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Logiclayer
+namespace BusinessLayer
 {
 	public static class Checker 
 	{

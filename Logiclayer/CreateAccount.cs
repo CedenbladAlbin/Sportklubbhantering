@@ -1,17 +1,19 @@
-﻿using Model;
+﻿
+using DataAccessLayer;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logiclayer
+namespace BusinessLayer
 {
     public static class CreateAccount
     {
         public static bool CreateAccountTrainer(string name, string specialization, string password)
         {
-            using var context = new Datalayer.Datalayer();
+            using var context = new DataAccessLayer.Datalayer();
             if (context.Trainer.Any(t => t.trainer_name == name))
             {
                 return false; 

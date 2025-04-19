@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
-namespace Logiclayer
+namespace BusinessLayer
 {
     public static class LogIn
     {
         public static bool CheckCredentials(string name, string password)
         {
-            using var context = new Datalayer.Datalayer();
+            using var context = new DataAccessLayer.Datalayer();
             var trainer = context.Trainer.SingleOrDefault(t => t.trainer_name == name);
 
             if (trainer == null)
