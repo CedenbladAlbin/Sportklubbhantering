@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UILayer.ViewPanels.EquipmentPanels;
 
 namespace Sportklubbhantering.ViewPanels
 {
@@ -34,8 +35,11 @@ namespace Sportklubbhantering.ViewPanels
 
         }
 
-        private void Reports_Click(object sender, RoutedEventArgs e)
+        private void ManageEquipment_Click(object sender, RoutedEventArgs e)
         {
+            EquipmentPanel equipmentPanel = new EquipmentPanel();
+            equipmentPanel.Show();
+            this.Close();
 
         }
 

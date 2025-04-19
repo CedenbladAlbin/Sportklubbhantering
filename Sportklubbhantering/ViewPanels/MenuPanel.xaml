@@ -33,7 +33,7 @@
 
             <Button Style="{StaticResource CustomButtonStyle}" 
                     Content="Manage equipment" 
-                    Click="Reports_Click"
+                    Click="ManageEquipment_Click"
                      Width="150"
                     Margin="0,0,0,10"/>
 

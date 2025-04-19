@@ -6,7 +6,9 @@ using System.Reflection.Metadata;
 namespace DataAccessLayer
 {
     public class Datalayer : DbContext
+  
     {
+        public DbSet<Equipment> Equipment { get; set; }
         public DbSet<Trainer> Trainer { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

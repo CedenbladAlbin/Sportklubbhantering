@@ -1,0 +1,57 @@
+﻿<Window x:Class="UILayer.ViewPanels.EquipmentPanels.EquipmentPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UILayer.ViewPanels.EquipmentPanels"
+        mc:Ignorable="d"
+        Title="Equipment Management" Height="450" Width="800" Background="#FFACD1">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,32,0,0" Height="279" Width="276">
+            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,0,0,10" ><Run Language="sv-se" Text="&#x9;"/><Run Text="Equipment Options"/></TextBlock>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="New Equipment" 
+                    Click="NewEquipment_Click"
+                    
+                    Width="150" Margin="0,0,0,10"/>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Edit Selected" 
+                    Click="EditEquipment_Click"
+                    Width="150" Margin="0,0,0,10"
+                    x:Name="EditButton"
+                    IsEnabled="False"/>
+
+            <Button Style="{StaticResource CustomButtonStyle}" 
+                    Content="Delete Selected" 
+                    Click="DeleteEquipment_Click"
+                    Width="150" Margin="0,0,0,10"
+                    x:Name="DeleteButton"
+                    IsEnabled="False"/>
+
+        </StackPanel>
+
+
+        <ListView Grid.Column="1"
+                  x:Name="EquipmentListView"
+                  Margin="10"
+                  SelectionChanged="EquipmentListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding equipment_ID}" />
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding equipment_name}" />
+                    <GridViewColumn Header="Category" DisplayMemberBinding="{Binding category}" />
+                    <GridViewColumn Header="Condition" DisplayMemberBinding="{Binding condition}" />
+                    <GridViewColumn Header="Available Count" DisplayMemberBinding="{Binding available_count}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
